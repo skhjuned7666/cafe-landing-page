@@ -4,13 +4,9 @@ import { stats } from "@/data/stats";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useCountUp } from "@/hooks/useCountUp";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { cafeImages } from "@/utils/cafeImage";
 
-const collageImages = [
-  "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
-  "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80",
-  "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
-  "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=600&q=80",
-];
+const collageImages = cafeImages.about;
 
 function CollageImage({ src, index }: { src: string; index: number }) {
   const ref = useRef<HTMLDivElement>(null);

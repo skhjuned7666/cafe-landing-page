@@ -8,6 +8,7 @@ import { SteamEffect } from "@/components/SteamEffect";
 import { useMouseParallax } from "@/hooks/useMouseParallax";
 import { HiStar, HiChevronDown } from "react-icons/hi2";
 import { BRAND_NAME } from "@/data/brand";
+import { cafeImages } from "@/utils/cafeImage";
 
 const CoffeeBeans3D = lazy(() =>
   import("@/components/CoffeeBeans3D").then((m) => ({
@@ -130,7 +131,7 @@ export function Hero() {
             <div className='relative'>
               <SteamEffect />
               <img
-                src='https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=85'
+                src={cafeImages.hero}
                 alt={`Premium ${BRAND_NAME} coffee cup`}
                 className='relative z-10 w-72 rounded-3xl object-cover shadow-2xl shadow-black/50 sm:w-96'
                 loading='eager'
